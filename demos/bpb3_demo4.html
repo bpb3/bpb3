@@ -1669,7 +1669,28 @@ number of mutation blocks.</p>
 demo4_fl_cohort_small_cluster4pwm/sbatch job_bpb3</p>
 <pre class="bash"><code>sbatch job_bpb3</code></pre>
 <p>Job script: demo4_fl_cohort_small_cluster4pwm/job_bpb3</p>
-<p><strong>Main process</strong> The main processes are stored in Slurm
+<pre class="bash"><code>#!/bin/csh
+
+#Job name:
+#SBATCH --job-name=demo4-bpb3-flC
+#
+# Project:
+#SBATCH --account=nn4605k
+#
+# Wall clock limit:
+#SBATCH --time=12:00:00
+#
+# Max memory usage:
+#SBATCH --mem-per-cpu=12G 
+###--partition=bigmem
+#
+# Number of cores:
+#SBATCH --cpus-per-task=12
+
+bpb3 run_pipeline --import_bpb3_config bpb3_clusterPWM_config_fl.py</code></pre>
+<p><br />
+<br />
+<strong>Main process</strong> The main processes are stored in Slurm
 file, example:</p>
 <pre><code>T-test
 Export at  bpb3/final_demo_data/demo4_fl_cohort_small_cluster4pwm/out/regions.bed
