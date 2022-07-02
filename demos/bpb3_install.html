@@ -370,7 +370,7 @@ Interaction with Binding Affinity Ranking version 3 (BayesPI-BAR3)</h1>
 <!-- 
 title: 'BPB3: BayesPI-BAR version 3 package User Guide'
 author: "Junbai Wang, Mingyi Yang, Magnar Bjoras, ..."
-date: "26 June, 2022" 
+date: "02 July, 2022" 
 output: 
  html_document: 
  df_print: paged 
@@ -388,9 +388,12 @@ output:
 # cd bpb3
 # python setup.py install</code></pre>
 </div>
-<div id="functions" class="section level2">
-<h2>Functions</h2>
-<p>Type “bpb3 –help” to list functions in bpb3 package.</p>
+<div id="tasks" class="section level2">
+<h2>Tasks</h2>
+<pre><code>Type &quot;bpb3 --help&quot; to list tasks in bpb3 package.
+Then type &quot;bpb3 &lt;task&gt; --help&quot; to display help of each task.</code></pre>
+<p><br />
+</p>
 <pre><code>bpb3 --help
 usage:  bpb3 &lt;task&gt; [&lt;args&gt;]
 
@@ -439,6 +442,12 @@ usage:  bpb3 &lt;task&gt; [&lt;args&gt;]
 
  optional arguments:
   -h, --help  show this help message and exit</code></pre>
+</div>
+<div id="parallel-options" class="section level2">
+<h2>Parallel options</h2>
+<pre><code>Run bpb3 in a local computer with multiple processes: only needs four lines, &quot;--user_cores&quot;, number of cores, &quot;--max_nodes&quot;, and maximum number of nodes in &quot;parallel_options.txt&quot;.
+
+Run bpb3 in slurm:  add three new lines &quot;--use_slurm&quot; , &quot;--slurm_account&quot; , and slurm account name in &quot;parallel_options.txt&quot;.</code></pre>
 </div>
 <div id="bpb3-demos-and-user-guide" class="section level2">
 <h2>BPB3 Demos and User Guide</h2>
